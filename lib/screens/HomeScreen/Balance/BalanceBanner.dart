@@ -2,7 +2,7 @@ import 'package:financial_app/common/formats.dart';
 import 'package:financial_app/common/widgets/GradientBanner.dart';
 import 'package:flutter/material.dart';
 
-class Balance extends StatelessWidget {
+class BalanceBanner extends StatelessWidget {
   final String label;
   final int balance;
   final TextStyle _subtitleTextStyle =
@@ -10,7 +10,7 @@ class Balance extends StatelessWidget {
   final TextStyle _titleTextStyle =
       TextStyle(fontSize: 40, fontWeight: FontWeight.w300);
 
-  Balance({
+  BalanceBanner({
     @required this.label,
     @required this.balance,
   });

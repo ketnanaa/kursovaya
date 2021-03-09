@@ -1,17 +1,17 @@
 import 'package:financial_app/common/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:financial_app/common/Formats.dart';
+import 'package:financial_app/common/formats.dart';
 
-class DateField extends StatefulWidget {
+class CustomDateField extends StatefulWidget {
   final Function(DateTime) onDatePick;
 
-  DateField({@required this.onDatePick});
+  CustomDateField({@required this.onDatePick});
 
   @override
-  _DateFieldState createState() => _DateFieldState();
+  _CustomDateFieldState createState() => _CustomDateFieldState();
 }
 
-class _DateFieldState extends State<DateField> {
+class _CustomDateFieldState extends State<CustomDateField> {
   static const HINT_TEXT = "Дата";
   DateTime _selectedDate;
   TextEditingController _textEditingController = TextEditingController();
