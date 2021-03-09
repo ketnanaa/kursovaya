@@ -1,6 +1,6 @@
 import 'package:financial_app/common/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:financial_app/common/Formats.dart';
+import 'package:financial_app/common/formats.dart';
 
 class DateField extends StatefulWidget {
   final Function(DateTime) onDatePick;
