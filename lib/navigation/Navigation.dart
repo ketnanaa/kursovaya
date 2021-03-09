@@ -3,6 +3,7 @@ import 'package:financial_app/models/AppModel.dart';
 import 'package:financial_app/navigation/CustomAppBar.dart';
 import 'package:financial_app/navigation/CustomNavBar.dart';
 import 'package:financial_app/screens/HomeScreen/HomeScreen.dart';
+import 'package:financial_app/screens/StatsScreen/StatsScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -11,7 +12,7 @@ class Navigation extends StatelessWidget {
     HomeScreen(),
     Placeholder(),
     Placeholder(),
-    Placeholder()
+    StatsScreen()
   ];
 
   @override
