@@ -1,4 +1,4 @@
-import 'package:financial_app/common/Styles.dart';
+import 'package:financial_app/common/styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
@@ -31,7 +31,8 @@ class CustomTextField extends StatelessWidget {
           hintText: this.hintText,
           isDense: true,
           contentPadding: EdgeInsets.all(10),
-          border: OutlineInputBorder(borderRadius: getRadius()),
+          border:
+              OutlineInputBorder(borderRadius: BorderRadius.all(getRadius())),
           fillColor: Colors.blueGrey[700],
           filled: true),
     );

@@ -1,4 +1,4 @@
-import 'package:financial_app/common/Styles.dart';
+import 'package:financial_app/common/styles.dart';
 import 'package:flutter/material.dart';
 
 class GradientBanner extends StatelessWidget {
@@ -13,7 +13,7 @@ class GradientBanner extends StatelessWidget {
       margin: EdgeInsets.only(bottom: 20),
       decoration: BoxDecoration(
           gradient: getGradient(),
-          borderRadius: getRadius(),
+          borderRadius: BorderRadius.all(getRadius()),
           boxShadow: [
             BoxShadow(
               color: Color.fromRGBO(0, 0, 0, 0.4),

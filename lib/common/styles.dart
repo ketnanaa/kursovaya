@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-BorderRadius getRadius() => BorderRadius.all(Radius.circular(20.0));
+Radius getRadius() => Radius.circular(20.0);
 
 Gradient getGradient() => LinearGradient(
     begin: Alignment.centerLeft,

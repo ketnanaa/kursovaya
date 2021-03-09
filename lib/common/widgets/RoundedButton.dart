@@ -1,4 +1,4 @@
-import 'package:financial_app/common/Styles.dart';
+import 'package:financial_app/common/styles.dart';
 import 'package:flutter/material.dart';
 
 class RoundedButton extends StatelessWidget {
@@ -19,7 +19,7 @@ class RoundedButton extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
             color: _color,
-            borderRadius: getRadius(),
+            borderRadius: BorderRadius.all(getRadius()),
           ),
           child: Center(
             child: Text(text, style: _labelTextStyle),

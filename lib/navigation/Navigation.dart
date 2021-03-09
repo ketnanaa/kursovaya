@@ -1,4 +1,4 @@
-import 'package:financial_app/common/Styles.dart';
+import 'package:financial_app/common/styles.dart';
 import 'package:financial_app/models/AppModel.dart';
 import 'package:financial_app/navigation/CustomAppBar.dart';
 import 'package:financial_app/navigation/CustomNavBar.dart';
