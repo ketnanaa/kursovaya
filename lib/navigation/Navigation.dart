@@ -1,9 +1,12 @@
 import 'package:financial_app/common/styles.dart';
 import 'package:financial_app/common/widgets/GradientActionButton.dart';
 import 'package:financial_app/models/AppModel.dart';
+import 'package:financial_app/models/debts/DebtsModel.dart';
 import 'package:financial_app/models/goals/GoalsModel.dart';
 import 'package:financial_app/navigation/CustomAppBar.dart';
 import 'package:financial_app/navigation/CustomNavBar.dart';
+import 'package:financial_app/screens/DebtsScreen/CreateDebtDialog.dart';
+import 'package:financial_app/screens/DebtsScreen/DebtsScreen.dart';
 import 'package:financial_app/screens/GoalsScreen/CreateGoalDialog.dart';
 import 'package:financial_app/screens/GoalsScreen/GoalsScreen.dart';
 import 'package:financial_app/screens/HomeScreen/HomeScreen.dart';
@@ -15,7 +18,7 @@ class Navigation extends StatelessWidget {
   final List<Widget> _pageWidgetsList = [
     HomeScreen(),
     GoalsScreen(),
-    Placeholder(),
+    DebtsScreen(),
     StatsScreen()
   ];
 
@@ -33,7 +36,16 @@ class Navigation extends StatelessWidget {
                   child: CreateGoalDialog(),
                 ));
       }),
-      null,
+      GradientActionButton(
+        tapHandler: () {
+          showDialog(
+              context: context,
+              builder: (_) => ChangeNotifierProvider<DebtsModel>.value(
+                    value: Provider.of<DebtsModel>(context, listen: false),
+                    child: CreateDebtDialog(),
+                  ));
+        },
+      ),
       null
     ];
 

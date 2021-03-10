@@ -2,6 +2,9 @@ import 'dart:io';
 import 'package:financial_app/models/AppModel.dart';
 import 'package:financial_app/models/costs/Cost.dart';
 import 'package:financial_app/models/costs/CostsModel.dart';
+import 'package:financial_app/models/debts/DebtType.dart';
+import 'package:financial_app/models/debts/Debt.dart';
+import 'package:financial_app/models/debts/DebtsModel.dart';
 import 'package:financial_app/models/goals/Goal.dart';
 import 'package:financial_app/models/goals/GoalsModel.dart';
 import 'package:financial_app/models/incomes/IncomesModel.dart';
@@ -16,6 +19,8 @@ Future<void> main() async {
   Directory directory = await pathProvider.getApplicationDocumentsDirectory();
   Hive.init(directory.path);
   Hive.registerAdapter(CostAdapter());
+  Hive.registerAdapter(DebtTypeAdapter());
+  Hive.registerAdapter(DebtAdapter());
   Hive.registerAdapter(GoalAdapter());
   runApp(FinancialApp());
 }
@@ -32,6 +37,7 @@ class FinancialApp extends StatelessWidget {
           ChangeNotifierProvider(create: (context) => IncomesModel()),
           ChangeNotifierProvider(create: (context) => CostsModel()),
           ChangeNotifierProvider(create: (context) => GoalsModel()),
+          ChangeNotifierProvider(create: (context) => DebtsModel()),
         ],
         child: Navigation(),
       ),
