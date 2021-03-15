@@ -14,7 +14,14 @@ import 'package:financial_app/screens/StatsScreen/StatsScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+/**
+ * Виджет для управления сменой экранов,
+ * использует AppModel как источник данных о текущем состоянии
+ */
 class Navigation extends StatelessWidget {
+  /**
+   * Массив виджетов экранов приложения
+   */
   final List<Widget> _pageWidgetsList = [
     HomeScreen(),
     GoalsScreen(),
@@ -26,6 +33,9 @@ class Navigation extends StatelessWidget {
   Widget build(BuildContext context) {
     AppModel _appModel = context.watch<AppModel>();
 
+    /**
+     * Массив виджетов ActionButton для каждого экрана
+     */
     final List<Widget> _pageActionButtonsList = [
       null,
       GradientActionButton(tapHandler: () {

@@ -3,6 +3,10 @@ import 'package:flutter/cupertino.dart';
 
 part 'Cost.g.dart';
 
+/**
+ * Модель данных с аннотациями для создания
+ * адаптера к библиотеке Hive
+ */
 @HiveType(typeId: 0)
 class Cost {
   @HiveField(0)

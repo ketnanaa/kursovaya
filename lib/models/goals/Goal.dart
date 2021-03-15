@@ -3,6 +3,10 @@ import 'package:flutter/cupertino.dart';
 
 part 'Goal.g.dart';
 
+/**
+ * Модель данных с аннотациями для создания
+ * адаптера к библиотеке Hive
+ */
 @HiveType(typeId: 3)
 class Goal {
   @HiveField(0)

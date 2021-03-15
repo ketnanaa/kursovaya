@@ -5,6 +5,10 @@ import 'dart:math';
 
 part 'Debt.g.dart';
 
+/**
+ * Модель данных с аннотациями для создания
+ * адаптера к библиотеке Hive
+ */
 @HiveType(typeId: 2)
 class Debt {
   @HiveField(0)
@@ -22,6 +26,8 @@ class Debt {
       @required this.total,
       @required this.accumulations,
       @required this.debtType}) {
+    // При созданиии нового объекта "Debt",
+    // поле id задается в конструкторе случайным уникальным значением
     final rand = new Random();
     final codeUnits = new List.generate(10, (index) {
       return rand.nextInt(33) + 89;

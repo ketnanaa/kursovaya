@@ -14,6 +14,11 @@ import 'package:path_provider/path_provider.dart' as pathProvider;
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+/**
+ * Точка входа в приложение, где происходит
+ * инициализация библиотеки Hive для взаимодействия с БД
+ * и запускается корневой виджет FinancialApp
+ */
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Directory directory = await pathProvider.getApplicationDocumentsDirectory();
@@ -25,6 +30,10 @@ Future<void> main() async {
   runApp(FinancialApp());
 }
 
+/**
+ * Корневой виджет приложения, регистрирует модели
+ * и виджет навигации
+ */
 class FinancialApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

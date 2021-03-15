@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 
+/**
+ * Модель для управления состоянием приложения(навигация, заголовок текущего экрана)
+ */
 class AppModel extends ChangeNotifier {
   final List<String> _screenLabels = ["ГЛАВНАЯ", "ЦЕЛИ", "ДОЛГИ", "СТАТИСТИКА"];
   int _currentScreenIndex = 0;
